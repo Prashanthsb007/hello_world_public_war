@@ -19,22 +19,22 @@
       username: prashanthsb2023@gmail.com
       password: Pacchi@007
 
- - name: create directory with a date in name
-   file: 
+  - name: create directory with a date in name
+    file: 
       path: /home/tomcat/backup
       state: directory
       mode: 0777
 
-#  - name: backup file with owner and permissions
-#    copy:
+  #- name: backup file with owner and permissions
+  #  copy:
   #    src: /opt/tomcat/webapps/webapp.war
-   #   dest: /home/tomcat/backup/webapp.war
-    #  remote_src: yes
+  #    dest: /home/tomcat/backup/webapp.war
+  #    remote_src: yes
 
- # - name: Delete remote war file
- #   file:
+  #- name: Delete remote war file
+  #  file:
   #    path: /opt/tomcat/webapps/webapp.war
-   #   state: absent
+  #    state: absent
 
   - name: deploy file with owner and permissions
     copy:
