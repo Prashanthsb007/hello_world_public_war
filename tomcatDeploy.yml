@@ -20,7 +20,7 @@
       password: Pacchi@007
 
  - name: create directory with a date in name
-    file: 
+   file: 
       path: /home/tomcat/backup
       state: directory
       mode: 0777
