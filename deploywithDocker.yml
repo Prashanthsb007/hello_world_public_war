@@ -6,7 +6,7 @@
   tasks:
       
     - name: login to jfrog
-      shell: "docker login -u prashanthsb2023@gmail.com -p Pacchi@007 devops2024.jfrog.io   
+      shell: "docker login -u prashanthsb2023@gmail.com -p Pacchi@007 devops2024.jfrog.io"  
     
     - name: pull an image
       shell: docker pull devops2024.jfrog.io/dockerhub/war_on_container:v${{ BUILD_NUMBER }}
