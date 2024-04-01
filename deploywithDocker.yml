@@ -9,12 +9,12 @@
       shell: "docker login -u prashanthsb2023@gmail.com -p Pacchi@007 devops2024.jfrog.io   
     
     - name: pull an image
-      shell: docker pull devops2024.jfrog.io/dockerhub/war_on_container:v${{BUILD_NUMBER}}
+      shell: docker pull devops2024.jfrog.io/dockerhub/war_on_container:v${{ BUILD_NUMBER }}
 
     #- name: remove container
      # shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -id --name devopsAppDeploy -p 8111:8080 devops2024.jfrog.io/dockerhub/war_on_container:v${{BUILD_NUMBER}}
+      shell: docker run -id --name devopsAppDeploy -p 8111:8080 devops2024.jfrog.io/dockerhub/war_on_container:v${{ BUILD_NUMBER }}
  
    
