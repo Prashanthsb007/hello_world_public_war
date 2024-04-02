@@ -1,2 +1,2 @@
 Simple Maven Project
--test
+-test 1
