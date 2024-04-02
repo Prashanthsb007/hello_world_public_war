@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: devops2024.jfrog.io/dockerhub/war_on_container:v${BUILD_NUMBER}
+        image: devops2024.jfrog.io/dockerhub/war_on_container:v${{ BUILD_NUMBER }}
         ports:
         - containerPort: 8080
