@@ -25,7 +25,7 @@
         <artifactId>jetty-maven-plugin</artifactId>
       </plugin>
 
-      <!-- Update the Maven Compiler Plugin configuration -->
+      <!-- Maven Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -35,22 +35,44 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+
+      <!-- Adding Checkstyle Plugin for code quality checks -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+          <!-- Configuration options for Checkstyle -->
+          <configLocation>checkstyle.xml</configLocation>
+          <failOnViolation>true</failOnViolation>
+        </configuration>
+        <executions>
+          <execution>
+            <id>checkstyle-check</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
   <dependencies>
-
+    <!-- Existing dependencies (servlet-api and jsp-api) -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Additional dependencies can be added here -->
   </dependencies>
 
 </project>
